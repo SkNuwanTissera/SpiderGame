@@ -49,7 +49,7 @@ def game(player):
             body += 1
             if body == 1:
                 drawnSpider = replacer(3, "(", drawnSpider)
-                drawnSpider = replacer(6, ")", drawnSpider )
+                drawnSpider = replacer(6, ")", drawnSpider)
             print(*drawnSpider, "\n")
 
 # Printing the legs
