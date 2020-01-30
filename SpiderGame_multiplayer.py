@@ -1,5 +1,6 @@
 from random import randint
 
+noOfPlayers = 0
 
 # need to show the progress of the spider through the game and add different players
 def replacer(index, character, array):
@@ -13,11 +14,15 @@ def welcomeMessage():
     print("First to complete a full Spider wins\n")
     print("You have to get the body first with a 6\n")
     print("\n--------------------------------------------\n")
+    # set/get Global Variables
+    global noOfPlayers
+    noOfPlayers = int(input("No.of Players ? : "))
 
 def initialPrompt():
     gameRunner = input("Do you like to start the game? y/n : ")
     if gameRunner == 'y':
         playerName = input("Player Name : ")
+        print(noOfPlayers)
         print("\nWelcome", playerName, '\nSo lets go\nThis is your first turn\n')
         return playerName
     else:
@@ -25,7 +30,6 @@ def initialPrompt():
 
 def startGame(name):
     game(name)
-
 
 def game(player):
     drawnSpider = ["_", "_", "_", "_", "_", "_", "_", "_", "_", "_"]
@@ -92,7 +96,9 @@ def game(player):
             if runner != 'y':
                 print("\nInvalid Entry !! \nGame Over!!")
 
+
 welcomeMessage()
 
-startGame(initialPrompt())
+while noOfPlayers > 0:
+    startGame(initialPrompt())
 

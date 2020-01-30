@@ -68,7 +68,7 @@ def game():
             break
         else:
             runner = input('Do you wish to roll again? y/n: ')
-    print("\nInvalid Entry !! \nGame Over!!")
+    # print("\nInvalid Entry !! \nGame Over!!")
 
 print("Welcome to the Spider Game")
 print("First to complete a full Spider wins")
